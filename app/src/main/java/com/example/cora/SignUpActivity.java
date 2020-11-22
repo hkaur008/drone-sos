@@ -158,12 +158,6 @@ public class SignUpActivity extends AppCompatActivity {
 
             //register here
 
-             User user = new User(username,email, password, false);
-
-            DatabaseReference myRef = database.getReference("users");
-
-            myRef.child(user.username).setValue(user);
-
 
 
             mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -180,7 +174,7 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             });
 
-
+//check whatsapp
 
         }
 
